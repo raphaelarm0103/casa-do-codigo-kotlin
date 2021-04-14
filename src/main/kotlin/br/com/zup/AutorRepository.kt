@@ -1,12 +1,12 @@
 package br.com.zup
 
 import io.micronaut.data.annotation.Repository
-import io.micronaut.data.jpa.repository.JpaRepository
+import io.micronaut.data.repository.CrudRepository
 import java.util.*
 
 
 @Repository
-interface AutorRepository : JpaRepository<Autor, Long> {
+interface AutorRepository : CrudRepository<Autor, Long> {
 
     fun findByEmail(email: String): Optional<Autor>
 
